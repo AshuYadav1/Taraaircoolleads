@@ -99,7 +99,7 @@ export default function FloatingWidgets() {
       </div>
 
       {/* Live Customer Notifications */}
-      <div className="fixed top-24 right-6 z-30 space-y-3 max-w-xs">
+      <div className="fixed top-24 right-6 z-30 space-y-3 max-w-xs hidden lg:block">
         <div className="bg-white border-l-4 border-green-500 rounded-lg shadow-lg p-4 transform transition-all duration-500 animate-slide-in-right">
           <div className="flex items-center">
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-3"></div>

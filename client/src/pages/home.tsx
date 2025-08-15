@@ -17,9 +17,14 @@ import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
 import StickyMobileFooter from "@/components/sticky-mobile-footer";
 import FloatingWidgets from "@/components/floating-widgets";
+import ExitIntentModal from "@/components/exit-intent-modal";
+import LiveChatWidget from "@/components/live-chat-widget";
+import ScrollProgress from "@/components/scroll-progress";
+import { useExitIntent } from "@/hooks/use-exit-intent";
 
 export default function Home() {
   const { trackEvent } = useAnalytics();
+  const { showExitIntent, closeExitIntent } = useExitIntent();
 
   useEffect(() => {
     trackEvent("page_view", "/");
@@ -27,6 +32,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollProgress />
+      <UrgencyBanner />
       {/* Header with sticky navigation */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,6 +88,11 @@ export default function Home() {
       <Footer />
       <StickyMobileFooter />
       <FloatingWidgets />
+      <LiveChatWidget />
+      <ExitIntentModal 
+        isOpen={showExitIntent} 
+        onClose={closeExitIntent} 
+      />
     </div>
   );
 }
