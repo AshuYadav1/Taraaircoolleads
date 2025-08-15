@@ -5,6 +5,8 @@ import HeroSection from "@/components/hero-section";
 import TrustAccelerator from "@/components/trust-accelerator";
 import AdvancedLeadMagnet from "@/components/advanced-lead-magnet";
 import ServiceShowcase from "@/components/service-showcase";
+import VideoGallery from "@/components/video-gallery";
+import ACServiceGallery from "@/components/ac-service-gallery";
 import PricingTable from "@/components/pricing-table";
 import WhyChooseUs from "@/components/why-choose-us";
 import SocialProof from "@/components/social-proof";
@@ -14,6 +16,7 @@ import FAQSection from "@/components/faq-section";
 import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
 import StickyMobileFooter from "@/components/sticky-mobile-footer";
+import FloatingWidgets from "@/components/floating-widgets";
 
 export default function Home() {
   const { trackEvent } = useAnalytics();
@@ -64,6 +67,8 @@ export default function Home() {
         <TrustAccelerator />
         <AdvancedLeadMagnet />
         <ServiceShowcase />
+        <VideoGallery />
+        <ACServiceGallery />
         <PricingTable />
         <WhyChooseUs />
         <SocialProof />
@@ -75,6 +80,7 @@ export default function Home() {
 
       <Footer />
       <StickyMobileFooter />
+      <FloatingWidgets />
     </div>
   );
 }

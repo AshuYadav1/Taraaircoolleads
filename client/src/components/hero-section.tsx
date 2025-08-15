@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { useAnalytics } from "@/hooks/use-analytics";
+import InteractiveServiceModal from "./interactive-service-modal";
 
 export default function HeroSection() {
   const { trackEvent, trackConversion } = useAnalytics();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showVideoPreview, setShowVideoPreview] = useState(false);
 
   const handleCallClick = () => {
     trackConversion("call");
@@ -11,6 +15,16 @@ export default function HeroSection() {
   const handleWhatsAppClick = () => {
     trackConversion("whatsapp");
     trackEvent("hero_whatsapp_click", "/");
+  };
+
+  const handleQuickQuoteClick = () => {
+    setIsModalOpen(true);
+    trackEvent("quick_quote_click", "hero");
+  };
+
+  const handleVideoPreviewClick = () => {
+    setShowVideoPreview(true);
+    trackEvent("video_preview_click", "hero");
   };
 
   return (
@@ -61,6 +75,17 @@ export default function HeroSection() {
                 Call Now - ₹499 Service
               </a>
               
+              <button
+                onClick={handleQuickQuoteClick}
+                data-testid="hero-quick-quote"
+                className="bg-white text-trust-blue font-bold py-4 px-8 rounded-lg text-lg flex items-center justify-center transition-all hover:bg-gray-100 border-2 border-white"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+                Get Instant Quote
+              </button>
+              
               <a 
                 href="https://wa.me/919876543210?text=Hi%20I%20need%20AC%20repair%20in%20Dahisar.%20My%20contact%20number%20is%20" 
                 onClick={handleWhatsAppClick}
@@ -86,13 +111,65 @@ export default function HeroSection() {
               className="rounded-xl shadow-2xl w-full h-auto"
               loading="lazy"
             />
+            
+            {/* Video Preview Overlay */}
+            <button
+              onClick={handleVideoPreviewClick}
+              className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-300 group"
+              data-testid="hero-video-preview"
+            >
+              <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 group-hover:scale-110 transition-transform">
+                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="text-sm font-medium">▶ Watch Our Work</div>
+                <div className="text-xs opacity-80">Real AC repair videos</div>
+              </div>
+            </button>
+
+            {/* Customer Count Badge */}
             <div className="absolute -bottom-6 -left-6 bg-white text-trust-blue p-4 rounded-lg shadow-lg">
               <div className="text-2xl font-bold" data-testid="customer-count">500+</div>
               <div className="text-sm">Happy Customers</div>
             </div>
+
+            {/* Live Chat Badge */}
+            <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-2 rounded-full text-sm font-medium animate-pulse">
+              🟢 Online Now
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Interactive Service Modal */}
+      <InteractiveServiceModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
+
+      {/* Video Preview Modal */}
+      {showVideoPreview && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50" onClick={() => setShowVideoPreview(false)}>
+          <div className="relative max-w-4xl w-full aspect-video" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              title="AC Repair Process Video"
+              className="w-full h-full rounded-lg"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <button 
+              onClick={() => setShowVideoPreview(false)}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 text-2xl"
+              data-testid="video-modal-close"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
