@@ -19,14 +19,34 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 py-12 lg:py-20 items-center">
           <div className="space-y-6">
             <div className="inline-block bg-accent-orange px-4 py-2 rounded-full text-sm font-medium animate-pulse">
-              Summer Offer - AC Service Just ₹499
+              🔥 Limited Time: AC Service Starting ₹499 Only
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              AC Repair & Installation in <span className="text-accent-orange">Dahisar</span> - Same-Day Service
+              #1 AC Repair & Installation in <span className="text-accent-orange">Dahisar Mumbai</span>
             </h1>
-            <p className="text-lg sm:text-xl text-blue-100">
-              Stay Cool Today - Transparent Pricing, Warranty Included. Serving Mumbai's Western Suburbs Since 2013.
+            <h2 className="text-xl sm:text-2xl font-semibold text-blue-100 mt-2">
+              Same-Day Emergency AC Service | All Brands | 10+ Years Experience
+            </h2>
+            <p className="text-lg sm:text-xl text-blue-100 mt-4">
+              ✅ Licensed Technicians ✅ Transparent Pricing ✅ Warranty on All Repairs<br/>
+              Serving 500+ Happy Customers in Dahisar, Borivali, Mira Road, Kandivali & Malad
             </p>
+            
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center gap-4 mt-4">
+              <div className="flex items-center bg-white/20 px-3 py-1 rounded-full text-sm">
+                <span className="text-yellow-300 mr-1">⭐⭐⭐⭐⭐</span>
+                <span>4.8/5 Google Rating</span>
+              </div>
+              <div className="flex items-center bg-white/20 px-3 py-1 rounded-full text-sm">
+                <span className="mr-1">🏆</span>
+                <span>500+ Jobs Completed</span>
+              </div>
+              <div className="flex items-center bg-white/20 px-3 py-1 rounded-full text-sm">
+                <span className="mr-1">⚡</span>
+                <span>2-4 Hours Response</span>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a 

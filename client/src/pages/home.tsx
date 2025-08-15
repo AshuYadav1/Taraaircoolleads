@@ -1,11 +1,15 @@
 import { useEffect } from "react";
 import { useAnalytics } from "@/hooks/use-analytics";
+import UrgencyBanner from "@/components/urgency-banner";
 import HeroSection from "@/components/hero-section";
 import TrustAccelerator from "@/components/trust-accelerator";
+import AdvancedLeadMagnet from "@/components/advanced-lead-magnet";
 import ServiceShowcase from "@/components/service-showcase";
+import PricingTable from "@/components/pricing-table";
 import WhyChooseUs from "@/components/why-choose-us";
 import SocialProof from "@/components/social-proof";
 import SpecialOffer from "@/components/special-offer";
+import SEOContentSection from "@/components/seo-content-section";
 import FAQSection from "@/components/faq-section";
 import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
@@ -53,13 +57,18 @@ export default function Home() {
         </div>
       </header>
 
+      <UrgencyBanner />
+      
       <main>
         <HeroSection />
         <TrustAccelerator />
+        <AdvancedLeadMagnet />
         <ServiceShowcase />
+        <PricingTable />
         <WhyChooseUs />
         <SocialProof />
         <SpecialOffer />
+        <SEOContentSection />
         <FAQSection />
         <ContactForm />
       </main>

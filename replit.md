@@ -1,12 +1,14 @@
 # Overview
 
-This is a modern full-stack web application for Tara Air Conditioning Sales & Service, a local AC repair and installation business serving Mumbai's Western Suburbs. The application functions as a lead generation platform with a marketing-focused landing page designed to convert visitors into customers through multiple call-to-action channels (phone, WhatsApp, and contact forms).
+This is a high-conversion, SEO-optimized, mobile-first landing page for Tara Air Conditioning Sales & Service, a local AC repair and installation business serving Mumbai's Western Suburbs. The application is designed as a comprehensive lead generation funnel with advanced conversion optimization, local SEO targeting, and multi-channel lead capture.
 
-The system is built as a monorepo with a React frontend, Express.js backend, and PostgreSQL database using Drizzle ORM. It includes comprehensive analytics tracking, lead management, and is optimized for local SEO and conversion optimization.
+The system features professional design elements, urgency-driven marketing, transparent pricing displays, and sophisticated analytics tracking. Built as a modern full-stack web application with React frontend, Express.js backend, and PostgreSQL database using Drizzle ORM, optimized for Google Ads, Facebook Ads, and organic search traffic.
 
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
+Focus on lead generation and conversion optimization.
+Emphasis on professional appearance, SEO keywords, and funnel creation.
 
 # System Architecture
 

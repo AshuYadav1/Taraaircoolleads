@@ -21,7 +21,10 @@ export class MemStorage implements IStorage {
   async createLead(insertLead: InsertLead): Promise<Lead> {
     const id = randomUUID();
     const lead: Lead = { 
-      ...insertLead, 
+      ...insertLead,
+      source: insertLead.source || null,
+      location: insertLead.location || null,
+      message: insertLead.message || null,
       id,
       createdAt: new Date()
     };
@@ -43,6 +46,9 @@ export class MemStorage implements IStorage {
     const id = randomUUID();
     const analytics: Analytics = {
       ...insertAnalytics,
+      page: insertAnalytics.page || null,
+      userAgent: insertAnalytics.userAgent || null,
+      ip: insertAnalytics.ip || null,
       id,
       createdAt: new Date()
     };
