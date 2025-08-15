@@ -1,0 +1,179 @@
+here’s your full high-quality lead funnel blueprint for Tara Air Conditioning Sales & Service in Mumbai.
+This will go beyond just the landing page and cover ads, tracking, retargeting, and lead qualification so you get genuine, ready-to-book customers.
+
+1️⃣ Funnel Overview
+
+Objective: Capture only high-intent Mumbai-based AC service leads → Qualify → Convert → Retarget.
+Funnel Stages:
+
+Attract – Google Search Ads (Hot), Meta Ads (Warm Awareness), Local SEO (Organic)
+
+Capture – Landing Page with filters (pricing + service type + location)
+
+Qualify – Multiple CTA paths + pre-screening questions
+
+Convert – Call, WhatsApp, or Form → Immediate follow-up
+
+Retarget – Ads to visitors who didn’t convert within 7 days
+
+2️⃣ Google Ads Setup (Hot, Ready-to-Buy Leads)
+
+Campaign Type:
+
+Search Ads (Performance Max optional later)
+
+Keywords focused on transactional intent (not just “AC info”)
+
+Keyword Examples:
+
++ac +repair +dahisar  
++ac +installation +borivali  
++ac +service +mira +road  
+"best ac repair near me"  
+[ac gas filling mumbai]  
+
+
+Key Settings:
+
+Location targeting: Dahisar + 8–10 km radius
+
+Ad Schedule: 9 AM–9 PM (avoid night junk leads)
+
+Ad Extensions:
+
+Call Extension (tracking number)
+
+Location Extension (Google My Business link)
+
+Price Extension (“Service from ₹499”)
+
+Ad Copy Tip: Always mention location + urgency + offer.
+Example:
+
+AC Repair in Dahisar – ₹499 Service  
+Same-Day Service | Warranty Included | Call Now
+
+3️⃣ Meta Ads Setup (Warm Awareness & Retargeting)
+
+Campaigns:
+
+Awareness Campaign: Short video of technician working + ₹499 seasonal offer
+
+Retargeting Campaign: People who visited landing page but didn’t contact → Offer-based ad
+
+Targeting:
+
+Location: 8 km radius around Dahisar
+
+Age: 25–55 (homeowners & decision-makers)
+
+Interest: Home Appliances, Air Conditioning, Mumbai Local News
+
+Creative Types:
+
+Short reel (10–15 sec) → Technician in action + price text + CTA
+
+Before/After image (dirty filter → clean filter)
+
+Offer card: “Summer AC Service ₹499 – Book Now”
+
+4️⃣ Landing Page Optimization (Lead Qualification)
+
+Already covered in AIDA prompt, but extra qualification tweaks:
+
+Dropdown “Select Service” so you know intent before calling
+
+Service area note: “Currently serving Dahisar, Borivali, Mira Road, Kandivali, Malad”
+
+Price range visible: “Services start from ₹499”
+
+WhatsApp button with pre-filled message:
+
+Hi, I need AC [repair/installation] in [location]. My contact number is ______.
+
+5️⃣ Tracking & Verification
+
+Tools:
+
+Google Tag Manager (to manage all tracking)
+
+GA4 for analytics
+
+Google Ads Conversion Tracking (call clicks, form submits, WhatsApp clicks)
+
+Meta Pixel for retargeting
+
+Call tracking number (Exotel, CallRail, or MyOperator)
+
+WhatsApp Business API (so you can see ad source in chat metadata)
+
+Events to Track:
+
+Call Button Click
+
+WhatsApp Click
+
+Form Submission
+
+Offer Banner Click
+
+6️⃣ Retargeting Logic (Hot Recapture)
+
+Retargeting Audience:
+
+Visited landing page but no conversion (7-day window)
+
+Clicked WhatsApp but didn’t send message
+
+Watched >50% of your ad video but didn’t act
+
+Ad Message Example:
+
+Still need AC service in Dahisar?  
+Book today – ₹499 Summer Offer + Free Filter Cleaning!  
+
+7️⃣ Lead Follow-Up Flow (Conversion Boost)
+
+Why? 40–50% of leads go cold if not contacted within 10 min.
+
+Process:
+
+Immediate Call – Within 5 minutes of form submission or WhatsApp message.
+
+SMS/WhatsApp Confirmation – Include booking time & technician name.
+
+Google Review Request – After job completion, send link for rating (boosts SEO).
+
+8️⃣ Organic Layer (Free, Long-Term Leads)
+
+Google My Business Optimization:
+
+Post 2× weekly (before/after photos, offers)
+
+Ask for 1–2 reviews after every job
+
+Add services in Hindi + English (local SEO boost)
+
+Local Directory Listings:
+
+Justdial, Sulekha, UrbanClap/Urban Company (free profile)
+
+Mumbai-specific Facebook groups (Borivali, Dahisar community groups)
+
+SEO Blog Ideas:
+
+“How to Prepare Your AC for Mumbai’s Summer”
+
+“5 Signs You Need AC Gas Filling in Dahisar”
+
+9️⃣ Funnel Visual Flow
+Google Ads / Meta Ads / GMB → Landing Page →  
+1. Call Now → Verified Lead  
+2. WhatsApp → Pre-filled Form → Verified Lead  
+3. Contact Form → Immediate Call Back → Verified Lead  
+↓  
+CRM / Google Sheet Tracking  
+↓  
+Retargeting Ads if no conversion  
+↓  
+Booking + Service + Review Request
