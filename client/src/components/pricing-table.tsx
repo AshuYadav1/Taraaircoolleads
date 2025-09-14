@@ -9,8 +9,8 @@ export default function PricingTable() {
       category: "Emergency AC Repair",
       popular: true,
       services: [
-        { name: "AC Not Cooling", price: "₹499", time: "Same Day" },
-        { name: "AC Gas Filling/Leak Repair", price: "₹1,500", time: "2-3 Hours" },
+        { name: "Emergency AC Repair", price: "₹499", time: "Same Day" },
+        { name: "Emergency AC Gas Filling", price: "₹1,500", time: "2-3 Hours" },
         { name: "Compressor Repair", price: "₹3,500", time: "Same Day" },
         { name: "PCB/Control Board Repair", price: "₹2,500", time: "Same Day" },
         { name: "Filter Cleaning", price: "₹299", time: "30 Minutes" },
@@ -20,9 +20,9 @@ export default function PricingTable() {
       category: "AC Installation Services",
       popular: false,
       services: [
-        { name: "Split AC Installation", price: "₹1,999", time: "3-4 Hours" },
+        { name: "AC Installation", price: "₹1,999", time: "3-4 Hours" },
+        { name: "AC Uninstallation", price: "₹750", time: "1-2 Hours" },
         { name: "Window AC Installation", price: "₹999", time: "2 Hours" },
-        { name: "AC Uninstallation", price: "₹699", time: "1-2 Hours" },
         { name: "AC Shifting", price: "₹1,499", time: "4-5 Hours" },
         { name: "Copper Piping (per foot)", price: "₹85", time: "As needed" },
       ]
@@ -31,10 +31,10 @@ export default function PricingTable() {
       category: "Maintenance & AMC",
       popular: false,
       services: [
+        { name: "Deep AC Cleaning", price: "₹799", time: "2 Hours" },
+        { name: "Annual AMC", price: "₹2,499", time: "Year-round" },
         { name: "Basic AC Service", price: "₹599", time: "1 Hour" },
-        { name: "Deep AC Cleaning", price: "₹999", time: "2 Hours" },
-        { name: "Annual AMC (4 visits)", price: "₹2,499", time: "Year-round" },
-        { name: "Pre-Summer AC Checkup", price: "₹799", time: "1.5 Hours" },
+        { name: "Pre-Festival AC Checkup", price: "₹799", time: "1.5 Hours" },
         { name: "Chemical Wash", price: "₹1,299", time: "2-3 Hours" },
       ]
     }
@@ -44,7 +44,7 @@ export default function PricingTable() {
     trackConversion("call");
     trackEvent("pricing_table_book", "/");
     const message = `Hi! I want to book ${serviceName} under ${category}. Please provide more details.`;
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`);
+    window.open(`https://wa.me/919702525317?text=${encodeURIComponent(message)}`);
   };
 
   return (

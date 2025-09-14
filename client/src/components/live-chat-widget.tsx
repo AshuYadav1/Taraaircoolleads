@@ -31,7 +31,7 @@ export default function LiveChatWidget() {
       setIsTyping(false);
       setMessages(prev => [...prev, { 
         type: 'bot', 
-        text: 'Thanks for your message! For immediate assistance, please call +91-98765-43210 or use WhatsApp. Our technician will respond within 2-4 hours.',
+        text: 'Thanks for your message! For immediate assistance, please call +91-97025-25317 or use WhatsApp. Our technician will respond within 2-4 hours.',
         time: new Date() 
       }]);
     }, 2000);
@@ -52,7 +52,7 @@ export default function LiveChatWidget() {
     <>
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border z-40 flex flex-col">
+        <div className="fixed bottom-24 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border z-30 flex flex-col">
           {/* Header */}
           <div className="bg-trust-blue text-white p-4 rounded-t-lg flex justify-between items-center">
             <div className="flex items-center">
@@ -144,21 +144,17 @@ export default function LiveChatWidget() {
         </div>
       )}
       
-      {/* Chat Button */}
-      <div className="fixed bottom-6 right-6 z-40">
+      {/* Chat Button - Repositioned to avoid conflicts */}
+      <div className="fixed bottom-6 right-6 z-30">
         <button
           onClick={toggleChat}
           className="bg-trust-blue hover:bg-trust-blue-light text-white rounded-full p-4 shadow-lg transition-all transform hover:scale-110"
           data-testid="chat-toggle"
+          aria-label="Live chat support"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
           </svg>
-          
-          {/* Notification Badge */}
-          <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
-            1
-          </div>
         </button>
       </div>
     </>

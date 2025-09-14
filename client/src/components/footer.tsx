@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="tel:+919876543210" 
+                href="tel:+919702525317" 
                 onClick={handleFooterCallClick}
                 data-testid="footer-call"
                 className="bg-trust-blue hover:bg-trust-blue-light px-4 py-2 rounded-lg transition-colors"
@@ -33,7 +33,7 @@ export default function Footer() {
                 📞 Call Now
               </a>
               <a 
-                href="https://wa.me/919876543210" 
+                href="https://wa.me/919702525317?text=Hi%20I%20need%20AC%20service%20in%20Mumbai.%20Please%20call%20me%20back." 
                 onClick={handleFooterWhatsAppClick}
                 data-testid="footer-whatsapp"
                 className="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-lg transition-colors"

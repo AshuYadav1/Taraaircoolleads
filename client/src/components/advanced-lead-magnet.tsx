@@ -10,7 +10,7 @@ export default function AdvancedLeadMagnet() {
   const services = [
     { id: "emergency-repair", name: "Emergency AC Repair", price: "₹499", urgent: true },
     { id: "ac-installation", name: "AC Installation", price: "₹1,999", urgent: false },
-    { id: "ac-gas-filling", name: "AC Gas Filling", price: "₹1,500", urgent: true },
+    { id: "ac-gas-filling", name: "Emergency AC Gas Filling", price: "₹1,500", urgent: true },
     { id: "amc-service", name: "Annual AMC", price: "₹2,499", urgent: false },
     { id: "ac-cleaning", name: "Deep AC Cleaning", price: "₹799", urgent: false },
   ];
@@ -23,14 +23,14 @@ export default function AdvancedLeadMagnet() {
   const handleQuickCall = () => {
     trackConversion("call");
     trackEvent("lead_magnet_call", "/");
-    window.location.href = "tel:+919876543210";
+    window.location.href = "tel:+919702525317";
   };
 
   const handleQuickWhatsApp = () => {
     trackConversion("whatsapp");
     trackEvent("lead_magnet_whatsapp", "/");
     const message = `Hi! I need ${selectedService ? services.find(s => s.id === selectedService)?.name : 'AC service'} in ${selectedArea || 'Mumbai'}. Please provide quote.`;
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`);
+    window.open(`https://wa.me/919702525317?text=${encodeURIComponent(message)}`);
   };
 
   const handleServiceSelect = (serviceId: string) => {

@@ -5,6 +5,25 @@ import { insertLeadSchema, insertAnalyticsSchema } from "@shared/schema";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Health check endpoint
+  app.get("/api/health", async (req: Request, res: Response) => {
+    try {
+      const isHealthy = await storage.isHealthy();
+      res.json({ 
+        status: isHealthy ? "healthy" : "unhealthy",
+        timestamp: new Date().toISOString(),
+        environment: process.env.NODE_ENV || "development"
+      });
+    } catch (error) {
+      console.error("Health check failed:", error);
+      res.status(503).json({ 
+        status: "unhealthy",
+        error: "Storage health check failed",
+        timestamp: new Date().toISOString()
+      });
+    }
+  });
+
   // Lead creation endpoint
   app.post("/api/leads", async (req: Request, res: Response) => {
     try {
@@ -14,16 +33,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Log the lead for monitoring
       console.log(`New lead created: ${lead.name} - ${lead.phone} - ${lead.service}`);
       
-      res.json(lead);
+      res.status(201).json({
+        success: true,
+        data: lead,
+        message: "Lead created successfully"
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         return res.status(400).json({ 
+          success: false,
           message: "Validation error", 
           errors: error.errors 
         });
       }
       console.error("Error creating lead:", error);
-      res.status(500).json({ message: "Failed to create lead" });
+      res.status(500).json({ 
+        success: false,
+        message: "Failed to create lead",
+        error: process.env.NODE_ENV === "development" ? (error as Error).message : "Internal server error"
+      });
     }
   });
 
@@ -31,10 +59,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/leads", async (req: Request, res: Response) => {
     try {
       const leads = await storage.getLeads();
-      res.json(leads);
+      res.json({
+        success: true,
+        data: leads,
+        count: leads.length
+      });
     } catch (error) {
       console.error("Error fetching leads:", error);
-      res.status(500).json({ message: "Failed to fetch leads" });
+      res.status(500).json({ 
+        success: false,
+        message: "Failed to fetch leads",
+        error: process.env.NODE_ENV === "development" ? (error as Error).message : "Internal server error"
+      });
+    }
+  });
+
+  // Get lead by ID
+  app.get("/api/leads/:id", async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params;
+      const lead = await storage.getLeadById(id);
+      
+      if (!lead) {
+        return res.status(404).json({
+          success: false,
+          message: "Lead not found"
+        });
+      }
+      
+      res.json({
+        success: true,
+        data: lead
+      });
+    } catch (error) {
+      console.error("Error fetching lead by ID:", error);
+      res.status(500).json({ 
+        success: false,
+        message: "Failed to fetch lead",
+        error: process.env.NODE_ENV === "development" ? (error as Error).message : "Internal server error"
+      });
     }
   });
 
@@ -48,16 +111,44 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
       
       const analytics = await storage.trackEvent(analyticsData);
-      res.json(analytics);
+      res.status(201).json({
+        success: true,
+        data: analytics,
+        message: "Event tracked successfully"
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         return res.status(400).json({ 
+          success: false,
           message: "Validation error", 
           errors: error.errors 
         });
       }
       console.error("Error tracking analytics:", error);
-      res.status(500).json({ message: "Failed to track event" });
+      res.status(500).json({ 
+        success: false,
+        message: "Failed to track event",
+        error: process.env.NODE_ENV === "development" ? (error as Error).message : "Internal server error"
+      });
+    }
+  });
+
+  // Get analytics
+  app.get("/api/analytics", async (req: Request, res: Response) => {
+    try {
+      const analytics = await storage.getAnalytics();
+      res.json({
+        success: true,
+        data: analytics,
+        count: analytics.length
+      });
+    } catch (error) {
+      console.error("Error fetching analytics:", error);
+      res.status(500).json({ 
+        success: false,
+        message: "Failed to fetch analytics",
+        error: process.env.NODE_ENV === "development" ? (error as Error).message : "Internal server error"
+      });
     }
   });
 
@@ -66,11 +157,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       // TODO: Implement WhatsApp Business API webhook handler
       console.log("WhatsApp webhook received:", req.body);
-      res.json({ status: "received" });
+      res.json({ 
+        success: true,
+        status: "received",
+        message: "Webhook processed successfully"
+      });
     } catch (error) {
       console.error("Error handling WhatsApp webhook:", error);
-      res.status(500).json({ message: "Failed to process WhatsApp webhook" });
+      res.status(500).json({ 
+        success: false,
+        message: "Failed to process WhatsApp webhook",
+        error: process.env.NODE_ENV === "development" ? (error as Error).message : "Internal server error"
+      });
     }
+  });
+
+  // 404 handler for API routes
+  app.use("/api/*", (req: Request, res: Response) => {
+    res.status(404).json({
+      success: false,
+      message: "API endpoint not found",
+      path: req.path
+    });
   });
 
   const httpServer = createServer(app);
