@@ -15,10 +15,15 @@ export default defineConfig({
   // Ensure SEO files are copied to dist
   publicDir: 'client/public',
   build: {
-    outDir: 'dist/public',
+    outDir: 'dist',
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL('./client/index.html', import.meta.url))
+      },
+      output: {
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     }
   },

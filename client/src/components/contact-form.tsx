@@ -215,53 +215,8 @@ export default function ContactForm() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Lead Quality Indicator */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Lead Quality Check</h3>
-              
-              {watchedService && watchedUrgency && watchedArea && watchedBudget && (
-                <div className="space-y-3">
-                  <div className="bg-blue-50 p-3 rounded-lg">
-                    <p className="text-sm font-medium text-blue-900">Service: {serviceOptions.find(s => s.value === watchedService)?.label}</p>
-                    <p className="text-xs text-blue-700">{serviceOptions.find(s => s.value === watchedService)?.price}</p>
-                  </div>
-                  
-                  <div className="bg-green-50 p-3 rounded-lg">
-                    <p className="text-sm font-medium text-green-900">Urgency: {urgencyOptions.find(u => u.value === watchedUrgency)?.label}</p>
-                  </div>
-                  
-                  <div className="bg-orange-50 p-3 rounded-lg">
-                    <p className="text-sm font-medium text-orange-900">Area: {watchedArea}</p>
-                  </div>
-                  
-                  <div className="bg-purple-50 p-3 rounded-lg">
-                    <p className="text-sm font-medium text-purple-900">Budget: {budgetOptions.find(b => b.value === watchedBudget)?.label}</p>
-                  </div>
-
-                  <div className="bg-gray-50 p-3 rounded-lg">
-                    <p className="text-sm font-medium text-gray-900">
-                      Quality: {calculateLeadQuality().quality}
-                    </p>
-                    <p className="text-xs text-gray-600 mt-1">
-                      Score: {calculateLeadQuality().score}/8
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              <button
-                onClick={() => setShowLeadQualification(true)}
-                className="w-full mt-4 bg-orange-500 text-white py-2 px-4 rounded-lg font-medium hover:bg-orange-600 transition-colors"
-              >
-                Advanced Lead Qualification
-              </button>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
+        {/* Contact Form - Full Width */}
+        <div className="max-w-4xl mx-auto">
             <form onSubmit={handleSubmit(onSubmit)} className="bg-white rounded-xl shadow-lg p-8">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -425,8 +380,19 @@ export default function ContactForm() {
                 <p>We'll contact you within 5 minutes</p>
                 <p>No hidden charges • Transparent pricing • Same-day service</p>
               </div>
+
+              {/* Advanced Lead Qualification - Subtle Option */}
+              <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                <p className="text-sm text-gray-500 mb-3">Need detailed service consultation?</p>
+                <button
+                  type="button"
+                  onClick={() => setShowLeadQualification(true)}
+                  className="text-trust-blue hover:text-trust-blue-light font-medium text-sm underline"
+                >
+                  Advanced Service Qualification →
+                </button>
+              </div>
             </form>
-          </div>
         </div>
 
         {/* Why Choose Us Section */}

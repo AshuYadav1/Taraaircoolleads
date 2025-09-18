@@ -25,7 +25,7 @@ export default function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProp
 
   const handleCallClick = () => {
     trackEvent("exit_intent_call", "modal");
-    window.open("tel:+919876543210");
+    window.open("tel:+919702525317");
     onClose();
   };
 

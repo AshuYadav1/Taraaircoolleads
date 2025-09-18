@@ -67,7 +67,7 @@ Problem: ${customerInfo.problem}
 From: Tara AC Website`;
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/919876543210?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/919702525317?text=${encodedMessage}`, '_blank');
     
     trackEvent("modal_submit", `/complete-${selectedService}-${selectedArea}-${selectedUrgency}`);
     onClose();
@@ -249,11 +249,11 @@ From: Tara AC Website`;
 
                 <div className="text-center">
                   <button
-                    onClick={() => window.open('tel:+919876543210')}
+                    onClick={() => window.open('tel:+919702525317')}
                     className="text-trust-blue hover:underline font-medium"
                     data-testid="modal-call-instead"
                   >
-                    📞 Or call directly: +91 98765-43210
+                    📞 Or call directly: +91 97025-25317
                   </button>
                 </div>
               </div>

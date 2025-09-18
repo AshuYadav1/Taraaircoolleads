@@ -8,25 +8,25 @@ export default function ACServiceGallery() {
   const serviceImages = {
     repair: [
       {
-        src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1581094794329-c8112a89af12800/600",
         title: "Split AC Repair - Gas Filling",
         description: "Professional gas filling with pressure testing for split AC unit in Dahisar home",
         location: "Dahisar West"
       },
       {
-        src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&w=800&h=600", 
+        src: "/api/placeholder/800/600", // Replace with actual AC service photo 
         title: "Compressor Replacement",
         description: "Replacing faulty compressor for window AC unit with warranty",
         location: "Borivali East"
       },
       {
-        src: "https://images.unsplash.com/photo-1504253163759-c23fccaebb55?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1504253163759-c23fccaebb55800/600",
         title: "PCB Circuit Board Repair",
         description: "Repairing control board for LG inverter AC with genuine parts",
         location: "Mira Road"
       },
       {
-        src: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1620626011761-996317b8d101800/600",
         title: "Filter Cleaning Service",
         description: "Deep cleaning of AC filters and indoor unit coil cleaning",
         location: "Kandivali West"
@@ -34,25 +34,25 @@ export default function ACServiceGallery() {
     ],
     installation: [
       {
-        src: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1581092580497-e0d23cbdf1dc800/600",
         title: "Split AC Installation",
         description: "Professional wall mounting and copper piping for new 1.5 ton split AC",
         location: "Dahisar East"
       },
       {
-        src: "https://images.unsplash.com/photo-1563822249547-71ed1a2a4937?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1563822249547-71ed1a2a4937800/600",
         title: "Outdoor Unit Mounting",
         description: "Secure outdoor unit installation with proper bracket mounting",
         location: "Borivali West"
       },
       {
-        src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/800/600", // Replace with actual AC service photo
         title: "Copper Piping Work",
         description: "Professional copper pipe installation with insulation and drainage",
         location: "Malad West"
       },
       {
-        src: "https://images.unsplash.com/photo-1504253163759-c23fccaebb55?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1504253163759-c23fccaebb55800/600",
         title: "Electrical Connections",
         description: "Safe electrical wiring and MCB installation for AC unit",
         location: "Kandivali East"
@@ -60,25 +60,25 @@ export default function ACServiceGallery() {
     ],
     maintenance: [
       {
-        src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1581094794329-c8112a89af12800/600",
         title: "Annual AMC Service",
         description: "Complete AC maintenance including cleaning, gas check, and performance test",
         location: "Dahisar West"
       },
       {
-        src: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1620626011761-996317b8d101800/600",
         title: "Chemical Wash Service",
         description: "Deep chemical cleaning of evaporator and condenser coils",
         location: "Mira Road East"
       },
       {
-        src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/800/600", // Replace with actual AC service photo
         title: "Pre-Summer Checkup",
         description: "Complete AC inspection and tune-up before summer season",
         location: "Borivali East"
       },
       {
-        src: "https://images.unsplash.com/photo-1563822249547-71ed1a2a4937?ixlib=rb-4.0.3&w=800&h=600",
+        src: "/api/placeholder/1563822249547-71ed1a2a4937800/600",
         title: "Filter Replacement",
         description: "High-quality filter replacement for better air quality",
         location: "Malad East"
@@ -185,7 +185,7 @@ export default function ACServiceGallery() {
             <div className="text-center">
               <div className="relative mb-4">
                 <img
-                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&w=600&h=400"
+                  src="/api/placeholder/1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&w=600&h=400"
                   alt="Dirty AC unit before cleaning service"
                   className="w-full h-48 object-cover rounded-lg"
                   loading="lazy"
@@ -202,7 +202,7 @@ export default function ACServiceGallery() {
             <div className="text-center">
               <div className="relative mb-4">
                 <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=600&h=400"
+                  src="/api/placeholder/1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=600&h=400"
                   alt="Clean AC unit after professional service"
                   className="w-full h-48 object-cover rounded-lg"
                   loading="lazy"
@@ -224,13 +224,13 @@ export default function ACServiceGallery() {
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
             <div className="flex items-center mb-4">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=60&h=60"
+                src="/api/placeholder/1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=60&h=60"
                 alt="Satisfied customer from Dahisar"
                 className="w-12 h-12 rounded-full mr-3"
                 loading="lazy"
               />
               <div>
-                <div className="font-semibold text-gray-900">Rajesh Sharma</div>
+                <div className="font-semibold text-gray-900">Verified Customer</div>
                 <div className="text-gray-600 text-sm">Dahisar West</div>
               </div>
             </div>
@@ -243,13 +243,13 @@ export default function ACServiceGallery() {
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
             <div className="flex items-center mb-4">
               <img
-                src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&w=60&h=60"
+                src="/api/placeholder/1494790108755-2616b612b786?ixlib=rb-4.0.3&w=60&h=60"
                 alt="Happy customer from Borivali"
                 className="w-12 h-12 rounded-full mr-3"
                 loading="lazy"
               />
               <div>
-                <div className="font-semibold text-gray-900">Priya Patel</div>
+                <div className="font-semibold text-gray-900">Verified Customer</div>
                 <div className="text-gray-600 text-sm">Borivali East</div>
               </div>
             </div>
@@ -262,13 +262,13 @@ export default function ACServiceGallery() {
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
             <div className="flex items-center mb-4">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=60&h=60"
+                src="/api/placeholder/1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=60&h=60"
                 alt="Customer testimonial from Mira Road"
                 className="w-12 h-12 rounded-full mr-3"
                 loading="lazy"
               />
               <div>
-                <div className="font-semibold text-gray-900">Amit Kumar</div>
+                <div className="font-semibold text-gray-900">Verified Customer</div>
                 <div className="text-gray-600 text-sm">Mira Road</div>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function ACServiceGallery() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+919876543210"
+                href="tel:+919702525317"
                 className="bg-accent-orange hover:bg-accent-orange-light text-white font-bold py-3 px-8 rounded-lg transition-colors"
                 data-testid="gallery-cta-call"
                 onClick={() => trackEvent("gallery_section_call", "/")}
@@ -296,7 +296,7 @@ export default function ACServiceGallery() {
                 📞 Call for Similar Service
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hi%20I%20saw%20your%20AC%20service%20gallery.%20I%20need%20similar%20quality%20work%20for%20my%20AC"
+                href="https://wa.me/919702525317?text=Hi%20I%20saw%20your%20AC%20service%20gallery.%20I%20need%20similar%20quality%20work%20for%20my%20AC"
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg transition-colors"
                 data-testid="gallery-cta-whatsapp"
                 onClick={() => trackEvent("gallery_section_whatsapp", "/")}

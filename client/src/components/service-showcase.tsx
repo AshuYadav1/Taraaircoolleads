@@ -8,7 +8,7 @@ const services = [
     price: "₹499",
     originalPrice: "₹999",
     features: ["Same-day service", "All brands covered", "90-day warranty", "Emergency response"],
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+    image: "/api/placeholder/400/300", // Replace with actual AC repair service photo
     popular: true,
     urgency: "🔥 Hot Deal"
   },
@@ -19,7 +19,7 @@ const services = [
     price: "₹1,999",
     originalPrice: "₹2,999",
     features: ["Professional installation", "Copper piping", "Electrical work", "Testing included"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+    image: "/api/placeholder/400/300", // Replace with actual AC installation service photo
     popular: false,
     urgency: "⚡ Limited Time"
   },
@@ -30,7 +30,7 @@ const services = [
     price: "₹1,500",
     originalPrice: "₹2,500",
     features: ["Emergency response", "Leak detection", "Quality gas", "Testing included"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+    image: "/api/placeholder/400/300", // Replace with actual AC installation service photo
     popular: false,
     urgency: "⚡ Quick Service"
   },
@@ -41,7 +41,7 @@ const services = [
     price: "₹2,499",
     originalPrice: "₹3,999",
     features: ["4 services/year", "Priority support", "Parts discount", "Emergency calls"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+    image: "/api/placeholder/400/300", // Replace with actual AC installation service photo
     popular: false,
     urgency: "🏆 Most Popular"
   },
@@ -52,7 +52,7 @@ const services = [
     price: "₹799",
     originalPrice: "₹1,299",
     features: ["Deep cleaning", "Coil cleaning", "Filter replacement", "Sanitization"],
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+    image: "/api/placeholder/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
     popular: false,
     urgency: "✨ Fresh Air"
   },
@@ -63,7 +63,7 @@ const services = [
     price: "₹750",
     originalPrice: "₹1,200",
     features: ["Safe removal", "Gas recovery", "Proper packing", "Disposal service"],
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+    image: "/api/placeholder/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
     popular: false,
     urgency: "💯 Best Price"
   }

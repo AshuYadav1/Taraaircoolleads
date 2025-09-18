@@ -2,23 +2,23 @@ const reviews = [
   {
     rating: 5,
     text: "Excellent service! AC was not cooling properly. Tara AC team came the same day and fixed it in 30 minutes. Very reasonable pricing and professional work.",
-    name: "Rajesh Sharma",
+    name: "Verified Customer",
     location: "Dahisar West",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+    image: "/api/placeholder/100/100", // Replace with actual customer photos
   },
   {
     rating: 5,
     text: "Got my new AC installed by Tara team. Clean installation, proper pipe work. They also explained how to use it properly. Highly recommended!",
-    name: "Priya Patel",
+    name: "Verified Customer",
     location: "Borivali East",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+    image: "/api/placeholder/100/100", // Replace with actual customer photos
   },
   {
     rating: 5,
     text: "Amazing service during monsoon season. AC was making noise and not cooling. Fixed within 2 hours of calling. Fair pricing and quality work.",
-    name: "Amit Kumar",
+    name: "Verified Customer",
     location: "Mira Road",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
+    image: "/api/placeholder/100/100", // Replace with actual customer photos
   },
 ];
 

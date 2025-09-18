@@ -116,7 +116,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center"
+                src="/api/placeholder/800/600" // Replace with actual hero image
                 alt="Professional AC technician servicing air conditioner in Mumbai"
                 className="w-full h-auto"
                 loading="eager"

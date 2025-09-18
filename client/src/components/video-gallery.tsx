@@ -9,24 +9,24 @@ export default function VideoGallery() {
     {
       id: "ac-repair-demo",
       title: "AC Repair Process - Split AC Gas Filling",
-      thumbnail: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&w=600&h=400",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder - replace with actual AC repair video
+      thumbnail: "/api/placeholder/600/400", // Replace with actual AC repair video thumbnail
+      videoUrl: "", // Replace with actual AC repair video URL
       description: "Watch our certified technician demonstrate AC gas filling and leak detection process",
       duration: "3:45"
     },
     {
       id: "ac-installation-timelapse",
       title: "Split AC Installation - Complete Process",
-      thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&w=600&h=400",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder - replace with actual installation video
+      thumbnail: "/api/placeholder/600/400", // Replace with actual installation video thumbnail
+      videoUrl: "", // Replace with actual installation video URL
       description: "Complete AC installation from wall mounting to final testing in Dahisar home",
       duration: "8:20"
     },
     {
       id: "customer-testimonial",
       title: "Happy Customer Review - Borivali",
-      thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=600&h=400",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder - replace with customer testimonial
+      thumbnail: "/api/placeholder/600/400", // Replace with actual customer testimonial thumbnail
+      videoUrl: "", // Replace with actual customer testimonial video URL
       description: "Real customer from Borivali shares experience with our AC repair service",
       duration: "2:15"
     }
@@ -117,7 +117,7 @@ export default function VideoGallery() {
             <p className="mb-6">Get the same quality work shown in these videos for your home</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+919876543210"
+                href="tel:+919702525317"
                 className="bg-white text-accent-orange font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
                 data-testid="video-cta-call"
                 onClick={() => trackEvent("video_section_call", "/")}
@@ -125,7 +125,7 @@ export default function VideoGallery() {
                 📞 Call for Video Consultation
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hi%20I%20saw%20your%20AC%20service%20videos.%20I%20need%20AC%20service%20in%20Mumbai"
+                href="https://wa.me/919702525317?text=Hi%20I%20saw%20your%20AC%20service%20videos.%20I%20need%20AC%20service%20in%20Mumbai"
                 className="bg-green-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition-colors"
                 data-testid="video-cta-whatsapp"
                 onClick={() => trackEvent("video_section_whatsapp", "/")}
